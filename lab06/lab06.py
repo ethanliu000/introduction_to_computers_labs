@@ -11,19 +11,17 @@ def gcd(a,b):
   i=0
   num1 = max(a,b)
   num2 = min(a,b)
-  while num2 != 0:
+  while num2 != 0: #進行輾轉相除法
     i=1
     r = num1 % num2
     num1 = num2
     num2 = r
-  if num2 == 0 and i != 1:
-    i=0
+  if num2 == 0 and i != 1: #判斷num2是否為一開始就等於0
     return num2
-  elif num2 == 0 :
-    i=0
+  elif num2 == 0 : #判斷num2是否為最大公因數
     return num1
   else:
-    return gcd(num1,num2)
+    return gcd(num1,num2) 
 
 ans1 = gcd(80, 20)
 ans2 = gcd(10, 0)

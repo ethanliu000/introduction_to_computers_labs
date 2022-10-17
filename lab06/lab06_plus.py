@@ -10,17 +10,17 @@ Original file is located at
 import random as r
 Times = {"One":0, "Two":0, "Three":0, "Four":0, "Five":0, "Six":0}
 list1 = list(Times.keys())
-list2 = list(Times.values())
-list_prob = []
+list2 = list(Times.values()) #計算各個數字出現次數
+list_prob = [] #存入機率的串列
 
 for i in range(1000000):
-  a = r.randint(1, 6)
+  a = r.randint(1, 6) #在1-6中隨機找出一個整數
   for j in range(1,7):
     if a == j:
-      list2[j-1]=list2[j-1]+1
+      list2[j-1]=list2[j-1]+1 #將數字出現的次數加1
 
 for i in range(6):
-  b = (list2[i]/1000000)*100
-  list_prob.append(round(b, 2))
+  b = (list2[i]/1000000)*100 
+  list_prob.append(round(b, 2)) #將計算出的機率存入串列
 for i in range(6):  
   print("The Probability of",list1[i],"is",list_prob[i],"%")
