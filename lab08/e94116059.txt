@@ -23,6 +23,7 @@ introduction_to_computers_labs
 .local
 .xsession-errors.old
 .Xauthority
+.vscode-server
 Public
 Videos
 text

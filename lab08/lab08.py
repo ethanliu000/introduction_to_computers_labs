@@ -2,11 +2,13 @@
 
 import os
 
+sep = os.linesep
 now_path=(os.path.abspath(os.getcwd()))
 now_path_split=now_path.split("/")
+now_path_split.remove('')
 now_path_split_len=len(now_path_split)
 print(now_path_split)
-for i in range(1,now_path_split_len):
+for i in range(0,now_path_split_len):
   path = 'e94116059.txt'
   f = open(path, 'a')
   f.write(now_path_split[i])
